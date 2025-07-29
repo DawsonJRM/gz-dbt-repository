@@ -11,6 +11,9 @@ sources:
         columns:
           - name: primary_key
             description: clé primaire
+            tests:
+              - unique
+              - not_null
           - name: date
             description: date du jour de la commande
           - name: orders_id
