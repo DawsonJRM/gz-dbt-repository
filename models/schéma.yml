@@ -9,6 +9,8 @@ sources:
         identifier: raw_gz_sales
         description: ventes de greenweez(gz)
         columns:
+          - name: primary_key
+            description: clé primaire
           - name: date
             description: date du jour de la commande
           - name: orders_id
