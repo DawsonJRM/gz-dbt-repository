@@ -13,7 +13,7 @@ sources:
             description: date du jour de la commande
           - name: orders_id
             description: id de la commande
-          - name: product_id
+          - name: pdt_id
             description: id du produit
           - name: revenue
             description: chiffre d'affaire par commande
@@ -21,7 +21,7 @@ sources:
             description: quantité du produit dans la commande
         tests:
           - unique:
-            column_name: "(orders_id || '-' || product_id)"
+            column_name: "(orders_id || '-' || pdt_id)"
       - name: product
         identifier: raw_gz_product
         description: produits de gz
