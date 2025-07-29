@@ -3,14 +3,47 @@ version: 2
 sources:
   - name: raw
     schema: gz_raw_data
+    description: dataset des ventes de greenweez
     tables:
       - name: sales
         identifier: raw_gz_sales
         description: ventes de greenweez(gz)
+        columns:
+          - name: date
+            description: date du jour de la commande
+          - name: orders_id
+            description: id de la commande
+          - name: product_id
+            description: id du produit
+          - name: revenue
+            description: chiffre d'affaire par commande
+          - name: quantity
+            description: quantité du produit dans la commande
       - name: product
         identifier: raw_gz_product
         description: produits de gz
+        columns: 
+          - name: product_id
+            description: id du produit
+            tests:
+              - unique
+              - not_null 
+          - name: purchase_price
+            description: prix d'achat du produit
+            
       - name: ship
         identifier: raw_gz_ship
         description: livraison de gz
+        columns:
+          - name: orders_id
+            description: id de la commande
+            tests:
+              - unique
+              - not_null
+          - name: shipping_fee
+            description: frais de livraisons
+          - name: log_cost
+            description: frais de logistique
+          - name: ship_cost
+            description: coût de la livraison
 
