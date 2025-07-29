@@ -23,7 +23,7 @@ sources:
         identifier: raw_gz_product
         description: produits de gz
         columns: 
-          - name: product_id
+          - name: products_id
             description: id du produit
             tests:
               - unique
