@@ -9,11 +9,6 @@ sources:
         identifier: raw_gz_sales
         description: ventes de greenweez(gz)
         columns:
-          - name: primary_key
-            description: clé primaire
-            tests:
-              - unique
-              - not_null
           - name: date
             description: date du jour de la commande
           - name: orders_id
@@ -24,6 +19,9 @@ sources:
             description: chiffre d'affaire par commande
           - name: quantity
             description: quantité du produit dans la commande
+        tests:
+          - unique:
+            column_name: "(orders_id || '-' || product_id)"
       - name: product
         identifier: raw_gz_product
         description: produits de gz
