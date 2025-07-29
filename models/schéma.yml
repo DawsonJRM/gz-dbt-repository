@@ -9,7 +9,7 @@ sources:
         identifier: raw_gz_sales
         description: ventes de greenweez(gz)
         columns:
-          - name: date
+          - name: date_date
             description: date du jour de la commande
           - name: orders_id
             description: id de la commande
