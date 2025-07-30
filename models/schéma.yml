@@ -48,3 +48,22 @@ sources:
             description: logistics cost
           - name: ship_cost
             description: shipping cost
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: campagnes de publicités de adwords
+        columns:
+          - name: date_date
+            description: date du click
+          - name: paid_source
+            description: d'ou le client a payer
+          - name: campaign_key
+            description: ID de la campagne de publicité
+          - name: camPGN_name
+            description: nom de la campagne de publicité
+          - name: ads_cost
+            description: cout de la publicité
+          - name: impression
+            description: nombre d'ouverture de la publicité
+          - name: click
+            description: nombre de click sur la pub
+          
