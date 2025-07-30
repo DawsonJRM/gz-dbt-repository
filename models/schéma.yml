@@ -44,7 +44,7 @@ sources:
               - not_null
            - name: shipping_fee
              description: fees for shipping
-           - name: log_cost
+           - name: logcost
              description: logistics cost
            - name: ship_cost
              description: shipping cost
