@@ -55,4 +55,8 @@ sources:
              description: logistics cost
            - name: ship_cost
              description: shipping cost
+      - name: sales_margin
+        indentifier: int_sales_margin
+        description: calcul de la marge
+
         
