@@ -1,30 +1,24 @@
-version : 2 
-
+# schema.yml
+version : 2
 sources:
   - name: raw
     schema: gz_raw_data
     description: Raw data files de GreenWizz
     tables:
-      - name: sales 
+      - name: sales
         identifier: raw_gz_sales
         description: Tables des ventes de GreenWizz
-        # Freshness testing
-        loaded_at_field: "CAST(date_date AS TIMESTAMP)"
-        freshness:
-          warn_after: {count: 90, period: day}
         columns:
            - name: date_date
              description: date of purchase
            - name: orders_id
              description: Id for each distinct order and primary key to ship table
-           - name: pdt_id
-             description: If for each disctinct product and primary key to product table  
+           - name: products_id
+             description: If for each disctinct product and primary key to product table
            - name: revenue
              description: ammount of turnover
            - name: quantity
              description: number of products
-      
-
         tests:
                - unique:
                   column_name: "(orders_id || '-' || pdt_id)"
@@ -37,9 +31,8 @@ sources:
              tests:
                - unique
                - not_null
-           - name: purchase_price
+           - name: purchased_price
              description: price to each distinct product
-              
       - name: ship
         identifier : raw_gz_ship
         description: Table des envoie de GreenWizz
@@ -48,15 +41,19 @@ sources:
              description: id for each orders Foreign key to dales table
              tests:
               - unique
-              - not_null 
+              - not_null
            - name: shipping_fee
              description: fees for shipping
            - name: log_cost
              description: logistics cost
            - name: ship_cost
              description: shipping cost
-      - name: sales_margin
-        indentifier: int_sales_margin
-        description: calcul de la marge
 
-        
+
+
+
+
+
+
+
+
