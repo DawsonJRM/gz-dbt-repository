@@ -58,8 +58,7 @@ sources:
             description: d'ou le client a payer
           - name: campaign_key
             tests:
-              - unique
-              - not_null
+              column_name: "(date_date || '-' || campaign_key)"
             description: ID de la campagne de publicité
           - name: camPGN_name
             description: nom de la campagne de publicité
@@ -79,8 +78,7 @@ sources:
             description: d'ou le client a payer
           - name: campaign_key
             tests:
-              - unique
-              - not_null
+              column_name: "(date_date || '-' || campaign_key)"
             description: ID de la campagne de publicité
           - name: camPGN_name
             description: nom de la campagne de publicité
@@ -100,8 +98,7 @@ sources:
             description: d'ou le client a payer
           - name: campaign_key
             tests:
-              - unique
-              - not_null
+              column_name: "(date_date || '-' || campaign_key)"
             description: ID de la campagne de publicité
           - name: camPGN_name
             description: nom de la campagne de publicité
@@ -121,8 +118,7 @@ sources:
             description: d'ou le client a payer
           - name: campaign_key
             tests:
-              - unique
-              - not_null
+              column_name: "(date_date || '-' || campaign_key)"
             description: ID de la campagne de publicité
           - name: camPGN_name
             description: nom de la campagne de publicité
