@@ -8,6 +8,10 @@ sources:
       - name: sales 
         identifier: raw_gz_sales
         description: Tables des ventes de GreenWizz
+        # Freshness testing
+        loaded_at_field: "CAST(date_date AS TIMESTAMP)"
+        freshness:
+          warn_after: {count: 90, period: day}
         columns:
            - name: date_date
              description: date of purchase
@@ -19,6 +23,7 @@ sources:
              description: ammount of turnover
            - name: quantity
              description: number of products
+      
 
         tests:
                - unique:
@@ -50,3 +55,4 @@ sources:
              description: logistics cost
            - name: ship_cost
              description: shipping cost
+        
