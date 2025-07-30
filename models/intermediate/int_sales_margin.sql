@@ -1,3 +1,11 @@
+ with 
+
+source as (
+
+    select * from {{ source('raw', 'sales') }}
+),
+ 
+ 
  SELECT
       products_id,
       date_date,
